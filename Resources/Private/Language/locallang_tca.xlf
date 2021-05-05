@@ -9,6 +9,10 @@
 			<trans-unit id="tx_ce_gallery.description">
 				<source>Image gallery module description</source>
 			</trans-unit>
+
+			<trans-unit id="tt_content.tx_xo_file">
+				<source>Images</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
