@@ -1,0 +1,21 @@
+tt_content {
+	ce_gallery =< lib.contentElement
+	ce_gallery {
+		templateName = Gallery.html
+		layoutRootPaths {
+			50 = EXT:ce_gallery/Resources/Private/Layouts/
+		}
+
+		templateRootPaths {
+			50 = EXT:ce_gallery/Resources/Private/Templates/
+		}
+
+		partialRootPaths {
+			50 = EXT:ce_gallery/Resources/Private/Partials/
+		}
+
+		dataProcessing {
+			120 = Ps14\CeGallery\DataProcessing\ModuleProcessor
+		}
+	}
+}

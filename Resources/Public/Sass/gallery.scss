@@ -1,0 +1,24 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap & XNA
+@import '../../../../xna/Resources/Public/Sass/functions';
+@import '../../../../xna/Resources/Public/Sass/variables';
+@import '../../../../xna/Resources/Public/Sass/mixins';
+@import '../../../../xna/Resources/Public/Sass/definitions';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Variablen
+$ce-gallery--use-css: true !default;
+$ce-gallery--layout-default: true !default;
+$ce-gallery--layout-slider: true !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+@if($ce-gallery--use-css) {
+	* {
+		background: gold;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// XNA Override
+@import '../../../../xna/Resources/Public/Sass/xna/modules/gallery';
