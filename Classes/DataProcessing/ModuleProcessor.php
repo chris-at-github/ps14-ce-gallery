@@ -23,6 +23,11 @@ class ModuleProcessor extends \Ps\Xo\DataProcessing\ModuleProcessor implements D
 	 * @return array the processed data as key/value store
 	 */
 	public function process(ContentObjectRenderer $contentObject, array $contentObjectConfiguration, array $processorConfiguration, array $processedData) {
+
+		if(isset($processedData['flexform']) === true && isset($processedData['data']['frame_classes']) === true) {
+			$processedData['data']['frame_classes'] .= ' ce-gallery--' . $processedData['flexform']['settings']['layout'];
+		}
+
 		return $processedData;
 	}
 }
