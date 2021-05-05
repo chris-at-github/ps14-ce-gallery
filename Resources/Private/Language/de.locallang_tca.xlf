@@ -10,6 +10,16 @@
 				<target>Bildergalerie Modul Beschreibung</target>
 			</trans-unit>
 
+			<trans-unit id="tx_ce_gallery.settings.layout">
+				<target>Layout</target>
+			</trans-unit>
+			<trans-unit id="tx_ce_gallery.settings.layouts.default">
+				<target>Standard</target>
+			</trans-unit>
+			<trans-unit id="tx_ce_gallery.settings.layouts.slider">
+				<target>Slider</target>
+			</trans-unit>
+
 			<trans-unit id="tt_content.tx_xo_file">
 				<target>Bilder</target>
 			</trans-unit>

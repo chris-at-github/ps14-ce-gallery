@@ -1,0 +1,31 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<main>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>-</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.layout type="array">
+						<TCEforms>
+							<label>LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.settings.layout</label>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<itemsProcFunc>Ps\Xo\Service\TcaService->getItemsBySettingsIdentifier</itemsProcFunc>
+								<itemsProcConfig>
+									<identifier>modules.ce_gallery.layouts</identifier>
+									<extension>xo</extension>
+								</itemsProcConfig>
+							</config>
+						</TCEforms>
+					</settings.layout>
+				</el>
+			</ROOT>
+		</main>
+	</sheets>
+</T3DataStructure>
