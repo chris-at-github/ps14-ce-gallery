@@ -15,6 +15,16 @@ tt_content {
 		}
 
 		dataProcessing {
+			30 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			30 {
+				as = images
+				references.fieldName = tx_xo_file
+			}
+			110 = Ps\Xo\DataProcessing\FlexFormProcessor
+			110 {
+				fieldName = pi_flexform
+				as = flexform
+			}
 			120 = Ps14\CeGallery\DataProcessing\ModuleProcessor
 		}
 	}
