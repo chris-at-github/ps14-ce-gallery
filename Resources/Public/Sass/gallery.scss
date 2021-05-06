@@ -18,7 +18,7 @@ $ce-gallery--layout-slider: true !default;
 	@if($ce-gallery--layout-default) {
 		.ce-gallery {
 			.gallery--image-container {
-				margin-top: -15px;
+				margin-top: 5px;
 			}
 
 			.gallery--image {
@@ -43,7 +43,7 @@ $ce-gallery--layout-slider: true !default;
 		@include media-breakpoint-up(sm) {
 			.ce-gallery {
 				.gallery--image-container {
-					margin-top: -$grid-gutter-width;
+					margin-top: -10px;
 				}
 
 				.gallery--image {
