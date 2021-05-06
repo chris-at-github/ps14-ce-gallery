@@ -39,20 +39,40 @@ plugin.tx_xo.settings.modules {
 		}
 
 		image {
-			width = 510
-			height = 510
-			cropVariant = thumbnail
-			mediaQueries {
-				0 {
-					maxWidth = 510
-					cropVariant = thumbnail
-					mediaQuery = (min-width: 0px)
-				}
+			default {
+				width = 510
+				height = 510
+				cropVariant = thumbnail
+				mediaQueries {
+					0 {
+						maxWidth = 510
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 0px)
+					}
 
-				1 {
-					maxWidth = 360
-					cropVariant = thumbnail
-					mediaQuery = (min-width: 576px)
+					1 {
+						maxWidth = 360
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 576px)
+					}
+				}
+			}
+			slider {
+				width = 800
+				height = 400
+				cropVariant = thumbnail
+				mediaQueries {
+					0 {
+						maxHeight = 250
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 0px)
+					}
+
+					1 {
+						maxHeight = 400
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 576px)
+					}
 				}
 			}
 		}

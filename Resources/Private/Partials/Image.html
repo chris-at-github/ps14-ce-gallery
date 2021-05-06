@@ -1,13 +1,37 @@
 <div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
 	<f:section name="Main">
+		<f:variable
+			name="imageSettings"
+			value="{settings.modules.ce_gallery.image.{flexform.settings.layout}}"
+		/>
+
+		<f:render
+			section="{flexform.settings.layout -> xo:format.ucFirst()}"
+			arguments="{image: image, settings: imageSettings}"
+		/>
+	</f:section>
+
+	<f:section name="Default">
 		<f:render partial="Components/Media" section="Picture" arguments="{
 			file: image,
 			image: {
-				maxWidth: settings.modules.ce_gallery.image.width,
-				height: settings.modules.ce_gallery.image.height,
-				cropVariant: settings.modules.ce_gallery.image.cropVariant
+				maxWidth: settings..width,
+				height: settings.height,
+				cropVariant: settings.cropVariant
 			},
-			sizes: settings.modules.ce_gallery.image.mediaQueries
+			sizes: settings.mediaQueries
+		}" />
+	</f:section>
+
+	<f:section name="Slider">
+		<f:render partial="Components/Media" section="Picture" arguments="{
+			file: image,
+			image: {
+				width: settings.width,
+				maxHeight: settings.height,
+				cropVariant: settings.cropVariant
+			},
+			sizes: settings.mediaQueries
 		}" />
 	</f:section>
 </div>
