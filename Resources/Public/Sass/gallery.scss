@@ -17,14 +17,25 @@ $ce-gallery--layout-slider: true !default;
 
 	@if($ce-gallery--layout-default) {
 		.ce-gallery {
-			.gallery--image-container {
-				margin-top: 5px;
+			.gallery--container {
+				& {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					@include make-row();
+				}
+
+				& > li {
+					margin: 0;
+					padding: 0;
+					@include make-col-ready();
+				}
 			}
 
 			.gallery--image {
 				& {
 					display: block;
-					margin-top: 15px;
+					margin-top: $spacing-default;
 					border: 5px solid #b1b1b1;
 				}
 
@@ -42,12 +53,26 @@ $ce-gallery--layout-slider: true !default;
 
 		@include media-breakpoint-up(sm) {
 			.ce-gallery {
-				.gallery--image-container {
-					margin-top: -10px;
+				.gallery--container {
+					& {
+						margin-top: -10px; // Ausgleich um wieder auf 20px zu kommen
+					}
+
+					& > li {
+						@include make-col(6);
+					}
 				}
 
 				.gallery--image {
 					margin-top: $grid-gutter-width;
+				}
+			}
+		}
+
+		@include media-breakpoint-up(md) {
+			.ce-gallery {
+				.gallery--container > li {
+					@include make-col(4);
 				}
 			}
 		}

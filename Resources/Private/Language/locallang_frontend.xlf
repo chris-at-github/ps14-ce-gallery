@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2021-05-05T06:25:54Z" product-name="ce_gallery">
+		<header/>
+		<body>
+			<trans-unit id="lightbox.prev">
+				<source>Previous image</source>
+			</trans-unit>
+			<trans-unit id="lightbox.next">
+				<source>Next image</source>
+			</trans-unit>
+			<trans-unit id="lightbox.close">
+				<source>Close detailed view</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
