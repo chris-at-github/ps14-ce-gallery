@@ -16,6 +16,14 @@ class ModuleProcessor extends \Ps\Xo\DataProcessing\ModuleProcessor implements D
 	];
 
 	/**
+	 * @var string[]
+	 */
+	protected $importJsFiles = [
+		'/assets/js/tobii.js',
+		'/assets/js/gallery.js',
+	];
+
+	/**
 	 * @param ContentObjectRenderer $contentObject The data of the content element or page
 	 * @param array $contentObjectConfiguration The configuration of Content Object
 	 * @param array $processorConfiguration The configuration of this processor
@@ -27,6 +35,8 @@ class ModuleProcessor extends \Ps\Xo\DataProcessing\ModuleProcessor implements D
 		if(isset($processedData['flexform']) === true && isset($processedData['data']['frame_classes']) === true) {
 			$processedData['data']['frame_classes'] .= ' ce-gallery--' . $processedData['flexform']['settings']['layout'];
 		}
+
+		//DebuggerUtility::var_dump($processedData);
 
 		return $processedData;
 	}
