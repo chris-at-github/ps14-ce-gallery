@@ -19,7 +19,6 @@ class ModuleProcessor extends \Ps\Xo\DataProcessing\ModuleProcessor implements D
 	 * @var string[]
 	 */
 	protected $importJsFiles = [
-		'/assets/js/tobii.js',
 		'/assets/js/gallery.js',
 	];
 
@@ -36,7 +35,10 @@ class ModuleProcessor extends \Ps\Xo\DataProcessing\ModuleProcessor implements D
 			$processedData['data']['frame_classes'] .= ' ce-gallery--' . $processedData['flexform']['settings']['layout'];
 		}
 
-		//DebuggerUtility::var_dump($processedData);
+		// Lightbox (Tobii) nur einbinden wenn das Haekchen (Image Zoom) im Backend aktiviert ist
+		if((int) $processedData['data']['image_zoom'] === 1) {
+			$this->addImportJsFiles(['/assets/js/tobii.js' => ['forceOnTop' => true]]);
+		}
 
 		return $processedData;
 	}

@@ -4,6 +4,7 @@
 	'use strict';
 
 	xna.on('documentLoaded', function() {
+		console.log(typeof(Tobii));
 		if(typeof(Tobii) === 'function') {
 			document.querySelectorAll('.gallery').forEach(function(node, index) {
 				let uid = node.getAttribute('data-gallery-uid');
