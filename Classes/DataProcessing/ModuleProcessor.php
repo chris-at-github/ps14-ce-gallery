@@ -40,6 +40,11 @@ class ModuleProcessor extends \Ps\Xo\DataProcessing\ModuleProcessor implements D
 			$this->addImportJsFiles(['/assets/js/tobii.js' => ['forceOnTop' => true]]);
 		}
 
+		// wenn Layout Slider ausgewaehlt ist
+		if(isset($processedData['flexform']['settings']['layout']) && $processedData['flexform']['settings']['layout'] === 'slider') {
+			$this->addImportJsFiles(['/assets/js/tiny-slider.js' => ['forceOnTop' => true]]);
+		}
+
 		return $processedData;
 	}
 }

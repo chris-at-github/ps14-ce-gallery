@@ -4,14 +4,16 @@
 	'use strict';
 
 	xna.on('documentLoaded', function() {
+
+		// Lightbox (gilt fuer Layout Default und Slider)
 		if(typeof(Tobii) === 'function') {
-			document.querySelectorAll('.gallery').forEach(function(node, index) {
-				let uid = node.getAttribute('data-gallery-uid');
-				let isLightbox = parseInt(node.getAttribute('data-gallery-lightbox'));
+			document.querySelectorAll('.ce-gallery').forEach(function(node, index) {
+				let uid = node.getAttribute('id');
+				let isLightbox = parseInt(node.querySelector('.gallery').getAttribute('data-gallery-lightbox'));
 
 				if(isLightbox === 1) {
 					let lightbox = new Tobii({
-						selector: '[data-gallery-uid="' + uid + '"] .gallery--image',
+						selector: '#' + uid + ' .gallery--image',
 						captionAttribute: 'title',
 						counter: false,
 						zoom: false,
@@ -25,6 +27,30 @@
 						autoplayVideo: true
 					});
 				}
+			});
+		}
+
+		// Slider
+		if(typeof(tns) === 'function') {
+			document.querySelectorAll('.ce-gallery--slider').forEach(function(node, index) {
+				let slider = tns({
+					container: node.querySelector('.slider--container'),
+					center: false,
+					loop: false,
+					autoWidth: true,
+					items: 3,
+					gutter: 20,
+					autoplay: false,
+					controls: true,
+					//controlsContainer: node.querySelector('.slider--controls .container-inner'),
+					nav: false,
+					//navContainer: node.querySelector('.slider--navigation .container-inner ul'),
+					onInit: function() {
+
+						// CSS Lazyload durch setzen der Klasse slider--initialized
+						node.querySelector('.slider').classList.add('slider--initialized');
+					}
+				});
 			});
 		}
 	});

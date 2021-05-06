@@ -12,4 +12,18 @@
 			</ul>
 		</div>
 	</f:section>
+
+	<f:section name="Slider">
+		<f:if condition="{data.bodytext}">
+			<f:format.html>{data.bodytext}</f:format.html>
+		</f:if>
+
+		<div class="slider gallery" data-gallery-uid="{data.uid}" data-gallery-lightbox="{data.image_zoom}">
+			<ul class="slider--container gallery--container">
+				<f:for each="{images}" as="image">
+					<li><f:render partial="Item" section="Main" arguments="{_all}" /></li>
+				</f:for>
+			</ul>
+		</div>
+	</f:section>
 </div>
