@@ -1,11 +1,9 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
 	<f:layout name="Default" />
 	<f:section name="Main">
-		<div class="gallery" data-gallery-uid="{data.uid}" data-gallery-lightbox="{data.image_zoom}">
-			<f:if condition="{images}">
-				<f:render partial="Listing" section="{flexform.settings.layout -> xo:format.ucFirst()}" arguments="{_all}" />
-			</f:if>
-		</div>
+		<f:if condition="{images}">
+			<f:render partial="Listing" section="{flexform.settings.layout -> xo:format.ucFirst()}" arguments="{_all}" />
+		</f:if>
 
 		<script>
 			xna.l10n.gallery = {
