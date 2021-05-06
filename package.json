@@ -10,14 +10,5 @@
 		"production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
 	},
 	"dependencies": {},
-	"devDependencies": {
-		"cross-env": "^5.1",
-		"laravel-mix": "^5.0.5",
-		"lodash": "^4.17.20",
-		"postcss-cachebuster": "^0.1.6",
-		"postcss-combine-duplicated-selectors": "^8.0.3",
-		"postcss-urlrewrite": "^0.2.2",
-		"sass": "^1.15.2",
-		"sass-loader": "^7.1.0"
-	}
+	"devDependencies": {}
 }
