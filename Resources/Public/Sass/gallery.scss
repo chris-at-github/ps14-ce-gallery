@@ -56,20 +56,45 @@ $ce-gallery--layout-slider: true !default;
 		.ce-gallery--slider {
 			.gallery--container {
 				& {
+					display: flex;
 					margin: 0;
 					padding: 0;
 					list-style: none;
 				}
 
 				& > li {
+					display: block;
 					margin: 0;
 					padding: 0;
 				}
 			}
 
 			.slider {
-				@extend %slider-controls;
-				@extend %slider-controls--above;
+				& {
+					@extend %slider-controls;
+					@extend %slider-controls--inline;
+					@extend %slider-navigation;
+					@extend %slider-navigation--bullets;
+					margin: $spacing-default 0 0 0;
+				}
+
+				.slider--interface {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					grid-template-rows: 50px;
+					grid-template-areas: 'slider--controls slider--navigation';
+					margin: rem(10px 0 0 0);
+				}
+
+				.slider--controls {
+					grid-area: slider--controls;
+				}
+
+				.slider--navigation {
+					grid-area: slider--navigation;
+					justify-self: right;
+					align-self: center;
+				}
 			}
 		}
 
