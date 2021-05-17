@@ -66,6 +66,11 @@ $ce-gallery--layout-slider: true !default;
 					padding: 0;
 				}
 			}
+
+			.slider {
+				@extend %slider-controls;
+				@extend %slider-controls--above;
+			}
 		}
 
 	}

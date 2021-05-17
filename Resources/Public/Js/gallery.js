@@ -42,9 +42,9 @@
 					gutter: 20,
 					autoplay: false,
 					controls: true,
-					//controlsContainer: node.querySelector('.slider--controls .container-inner'),
-					nav: false,
-					//navContainer: node.querySelector('.slider--navigation .container-inner ul'),
+					controlsContainer: node.querySelector('.slider--controls .slider--controls-inner'),
+					nav: true,
+					navContainer: node.querySelector('.slider--navigation .slider--navigation-inner ul'),
 					onInit: function() {
 
 						// CSS Lazyload durch setzen der Klasse slider--initialized
