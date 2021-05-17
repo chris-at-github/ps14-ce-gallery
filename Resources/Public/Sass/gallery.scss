@@ -60,6 +60,9 @@ $ce-gallery--layout-slider: true !default;
 					margin: 0;
 					padding: 0;
 					list-style: none;
+
+					height: 400px;
+					overflow: hidden;
 				}
 
 				& > li {
@@ -94,6 +97,12 @@ $ce-gallery--layout-slider: true !default;
 					grid-area: slider--navigation;
 					justify-self: right;
 					align-self: center;
+				}
+			}
+
+			.slider--initialized {
+				.gallery--container {
+					overflow: inherit;
 				}
 			}
 		}
