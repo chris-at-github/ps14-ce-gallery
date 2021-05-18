@@ -72,6 +72,10 @@ $ce-gallery--layout-slider: true !default;
 				}
 			}
 
+			.gallery--image {
+				@extend %accessibility-focus-overflow;
+			}
+
 			.slider {
 				& {
 					@extend %slider-controls;

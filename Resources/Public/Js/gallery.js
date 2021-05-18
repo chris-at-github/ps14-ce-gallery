@@ -57,6 +57,8 @@
 								item.querySelectorAll('a, button').forEach(function(element) {
 									element.setAttribute('tabindex', '-1');
 								});
+							} else {
+								item.removeAttribute('aria-hidden');
 							}
 
 							// Beim Fokusieren eines Links / Buttons innerhalb eines Eintrags immer zu diesem Eintrag springen
@@ -85,25 +87,6 @@
 						}
 					}
 				});
-
-				// // Links und Buttons von 'versteckten' Eintraegen aus der Tab-Reihenfolge entfernen bzw. wieder aufnehmen
-				// slider.events.on('transitionEnd', function() {
-				// 	node.querySelectorAll('.tns-item').forEach(function(item) {
-				//
-				// 		// nicht versteckt
-				// 		if(item.getAttribute('aria-hidden') === null) {
-				// 			item.querySelectorAll('a, button').forEach(function(element) {
-				// 				element.removeAttribute('tabindex');
-				// 			});
-				//
-				// 		// versteckt
-				// 		} else {
-				// 			item.querySelectorAll('a, button').forEach(function(element) {
-				// 				element.setAttribute('tabindex', '-1');
-				// 			});
-				// 		}
-				// 	});
-				// });
 			});
 		}
 	});
