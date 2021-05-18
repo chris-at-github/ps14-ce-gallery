@@ -49,8 +49,61 @@
 
 						// CSS Lazyload durch setzen der Klasse slider--initialized
 						node.querySelector('.slider').classList.add('slider--initialized');
+
+						node.querySelectorAll('.tns-item').forEach(function(item, index) {
+
+							// Focus auf geklonte Eintraege verhindern
+							if(item.classList.contains('tns-slide-cloned') === true) {
+								item.querySelectorAll('a, button').forEach(function(element) {
+									element.setAttribute('tabindex', '-1');
+								});
+							}
+
+							// Beim Fokusieren eines Links / Buttons innerhalb eines Eintrags immer zu diesem Eintrag springen
+							item.querySelectorAll('a, button').forEach(function(element) {
+								element.addEventListener('focus', function() {
+									slider.goTo(item.getAttribute('data-index'));
+								});
+							});
+						});
+
+						// Slider Controls wieder fixen
+						let controls = node.querySelector('.slider--controls .slider--controls-inner');
+						if(controls !== null) {
+							controls.removeAttribute('tabindex');
+							controls.removeAttribute('aria-label');
+						}
+
+						// Slider Navigation wieder fixen
+						let navigation = node.querySelector('.slider--navigation .slider--navigation-inner ul');
+						if(navigation !== null) {
+							navigation.removeAttribute('aria-label');
+
+							navigation.querySelectorAll('li').forEach(function(item) {
+								item.removeAttribute('aria-label');
+							});
+						}
 					}
 				});
+
+				// // Links und Buttons von 'versteckten' Eintraegen aus der Tab-Reihenfolge entfernen bzw. wieder aufnehmen
+				// slider.events.on('transitionEnd', function() {
+				// 	node.querySelectorAll('.tns-item').forEach(function(item) {
+				//
+				// 		// nicht versteckt
+				// 		if(item.getAttribute('aria-hidden') === null) {
+				// 			item.querySelectorAll('a, button').forEach(function(element) {
+				// 				element.removeAttribute('tabindex');
+				// 			});
+				//
+				// 		// versteckt
+				// 		} else {
+				// 			item.querySelectorAll('a, button').forEach(function(element) {
+				// 				element.setAttribute('tabindex', '-1');
+				// 			});
+				// 		}
+				// 	});
+				// });
 			});
 		}
 	});
