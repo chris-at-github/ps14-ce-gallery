@@ -14,12 +14,6 @@ mix.options({
 	processCssUrls: false
 });
 
-// mix.webpackConfig({
-// 	output: {
-// 		publicPath: '../../../'
-// 	}
-// });
-
 mix.js('Resources/Public/Js/gallery.js', 'assets/js/gallery.js')
 mix.sass('Resources/Public/Sass/gallery.scss', 'assets/css/modules/gallery.css')
 	.options({
