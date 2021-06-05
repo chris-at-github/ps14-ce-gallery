@@ -90,7 +90,7 @@ $ce-gallery--layout-slider: true !default;
 					grid-template-columns: 1fr 1fr;
 					grid-template-rows: 50px;
 					grid-template-areas: 'slider--controls slider--navigation';
-					margin: rem(10px 0 0 0);
+					margin-top: rem(10px);
 				}
 
 				.slider--controls {

@@ -4,14 +4,17 @@ tt_content {
 		templateName = Gallery.html
 		layoutRootPaths {
 			10 = EXT:ce_gallery/Resources/Private/Layouts/
+			20 = EXT:xna/Resources/Private/Extensions/CeGallery/Layouts/
 		}
 
 		templateRootPaths {
 			10 = EXT:ce_gallery/Resources/Private/Templates/
+			20 = EXT:xna/Resources/Private/Extensions/CeGallery/Templates/
 		}
 
 		partialRootPaths {
 			10 = EXT:ce_gallery/Resources/Private/Partials/
+			20 = EXT:xna/Resources/Private/Extensions/CeGallery/Partials/
 		}
 
 		dataProcessing {
