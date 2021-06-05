@@ -10,6 +10,13 @@
 				<source>Image gallery module description</source>
 			</trans-unit>
 
+			<trans-unit id="tx_ce_gallery.tab.main">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="tx_ce_gallery.tab.slider">
+				<source>Slider</source>
+			</trans-unit>
+
 			<trans-unit id="tx_ce_gallery.settings.layout">
 				<source>Layout</source>
 			</trans-unit>
@@ -18,6 +25,12 @@
 			</trans-unit>
 			<trans-unit id="tx_ce_gallery.settings.layouts.slider">
 				<source>Slider</source>
+			</trans-unit>
+			<trans-unit id="tx_ce_gallery.settings.controls">
+				<source>Display controls</source>
+			</trans-unit>
+			<trans-unit id="tx_ce_gallery.settings.navigation">
+				<source>Display navigation</source>
 			</trans-unit>
 
 			<trans-unit id="tt_content.tx_xo_file">

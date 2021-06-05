@@ -33,6 +33,11 @@
 		// Slider
 		if(typeof(tns) === 'function') {
 			document.querySelectorAll('.ce-gallery--slider').forEach(function(node, index) {
+
+				// Controls | Navigation anzeigen
+				let controls = node.querySelector('.slider--controls .slider--controls-inner');
+				let navigation = node.querySelector('.slider--navigation .slider--navigation-inner');
+
 				let slider = tns({
 					container: node.querySelector('.slider--container'),
 					center: false,
@@ -41,9 +46,9 @@
 					items: 3,
 					gutter: 20,
 					autoplay: false,
-					controls: true,
+					controls: (controls !== null),
 					controlsContainer: node.querySelector('.slider--controls .slider--controls-inner'),
-					nav: true,
+					nav: (navigation !== null),
 					navContainer: node.querySelector('.slider--navigation .slider--navigation-inner ul'),
 					onInit: function() {
 
@@ -70,16 +75,14 @@
 						});
 
 						// Slider Controls wieder fixen
-						let controls = node.querySelector('.slider--controls .slider--controls-inner');
 						if(controls !== null) {
 							controls.removeAttribute('tabindex');
 							controls.removeAttribute('aria-label');
 						}
 
 						// Slider Navigation wieder fixen
-						let navigation = node.querySelector('.slider--navigation .slider--navigation-inner ul');
 						if(navigation !== null) {
-							navigation.removeAttribute('aria-label');
+							navigation.querySelector('ul').removeAttribute('aria-label');
 
 							navigation.querySelectorAll('li').forEach(function(item) {
 								item.removeAttribute('aria-label');

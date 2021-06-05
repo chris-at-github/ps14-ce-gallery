@@ -6,13 +6,14 @@
 		<main>
 			<ROOT>
 				<TCEforms>
-					<sheetTitle>-</sheetTitle>
+					<sheetTitle>LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.tab.main</sheetTitle>
 				</TCEforms>
 				<type>array</type>
 				<el>
 					<settings.layout type="array">
 						<TCEforms>
 							<label>LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.settings.layout</label>
+							<onChange>reload</onChange>
 							<config>
 								<type>select</type>
 								<renderType>selectSingle</renderType>
@@ -27,5 +28,45 @@
 				</el>
 			</ROOT>
 		</main>
+		<slider>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.tab.slider</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.slider.controls type="array">
+						<TCEforms>
+							<label>LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.settings.controls</label>
+							<displayCond>FIELD:main.settings.layout:=:slider</displayCond>
+							<config>
+								<type>check</type>
+								<default>0</default>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.enabled</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.slider.controls>
+					<settings.slider.navigation type="array">
+						<TCEforms>
+							<label>LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.settings.navigation</label>
+							<displayCond>FIELD:main.settings.layout:=:slider</displayCond>
+							<config>
+								<type>check</type>
+								<default>0</default>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.enabled</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.slider.navigation>
+				</el>
+			</ROOT>
+		</slider>
 	</sheets>
 </T3DataStructure>
