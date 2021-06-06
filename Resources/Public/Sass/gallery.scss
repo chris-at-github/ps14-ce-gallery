@@ -15,6 +15,12 @@ $ce-gallery--layout-slider: true !default;
 // CSS
 @if($ce-gallery--use-css) {
 
+	// -------------------------------------------------------------------------------------------------------------------
+	// CSS Variablen
+	:root {
+		--gallery--slider-height: 400px;
+	}
+
 	@if($ce-gallery--layout-default) {
 		.ce-gallery--default {
 			.gallery--container {
@@ -61,7 +67,7 @@ $ce-gallery--layout-slider: true !default;
 					padding: 0;
 					list-style: none;
 
-					height: 400px;
+					height: var(--gallery--slider-height);
 					overflow: hidden;
 				}
 
