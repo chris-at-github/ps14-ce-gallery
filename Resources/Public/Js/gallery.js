@@ -1,5 +1,3 @@
-// ---------------------------------------------------------------------------------------------------------------------
-// Layout 01
 (function () {
 	'use strict';
 
@@ -34,6 +32,9 @@
 		if(typeof(tns) === 'function') {
 			document.querySelectorAll('.ce-gallery--slider').forEach(function(node, index) {
 
+				// Event CeGallery_BeforeSliderInitialize ausfuehren
+				xna.fireEvent('CeGallery_BeforeSliderInitialize', {node: node});
+
 				// Controls | Navigation anzeigen
 				let controls = node.querySelector('.slider--controls .slider--controls-inner');
 				let navigation = node.querySelector('.slider--navigation .slider--navigation-inner');
@@ -43,8 +44,8 @@
 					center: false,
 					loop: false,
 					autoWidth: true,
-					items: 3,
-					gutter: 20,
+					items: 1,
+					gutter: 0,
 					autoplay: false,
 					controls: (controls !== null),
 					controlsContainer: node.querySelector('.slider--controls .slider--controls-inner'),
@@ -90,6 +91,9 @@
 						}
 					}
 				});
+
+				// Event CeGallery_AfterSliderInitialize ausfuehren
+				xna.fireEvent('CeGallery_AfterSliderInitialize', {node: node, slider: slider});
 			});
 		}
 	});
