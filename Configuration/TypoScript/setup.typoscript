@@ -29,7 +29,17 @@ tt_content {
 				as = flexform
 			}
 			120 = Ps\Xo\DataProcessing\SettingsProcessor
+
 			130 = Ps14\CeGallery\DataProcessing\ModuleProcessor
+			130 {
+				importCss {
+					10 = /assets/css/modules/gallery.css
+				}
+
+				importJs {
+					10 = /assets/js/gallery.js
+				}
+			}
 		}
 	}
 }
