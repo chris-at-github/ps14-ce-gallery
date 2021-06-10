@@ -21,14 +21,20 @@
 		<div class="slider gallery" data-gallery-uid="{data.uid}" data-gallery-lightbox="{data.image_zoom}">
 			<ul class="slider--container gallery--container">
 				<f:for each="{images}" as="image" iteration="iterator">
-					<li data-index="{iterator.index}"><f:render partial="Item" section="Main" arguments="{_all}" /></li>
+					<li class="slider--item" data-index="{iterator.index}"><f:render partial="Item" section="Main" arguments="{_all}" /></li>
 				</f:for>
 			</ul>
 
-			<div class="slider--interface">
-				<f:render partial="Components/Slider" section="Controls" arguments="{icons: {prev: '/assets/svg/chevron-left.svg', next: '/assets/svg/chevron-right.svg'}}" />
-				<f:render partial="Components/Slider" section="Navigation" arguments="{elements: images}" />
-			</div>
+			<f:if condition="{flexform.settings.slider.controls} == 1 || {flexform.settings.slider.navigation} == 1">
+				<div class="slider--interface">
+					<f:if condition="{flexform.settings.slider.controls} == 1">
+						<f:render partial="Components/Slider" section="Controls" arguments="{icons: {prev: '/assets/svg/chevron-left.svg', next: '/assets/svg/chevron-right.svg'}}" />
+					</f:if>
+					<f:if condition="{flexform.settings.slider.navigation} == 1">
+						<f:render partial="Components/Slider" section="Navigation" arguments="{elements: images}" />
+					</f:if>
+				</div>
+			</f:if>
 		</div>
 	</f:section>
 </div>
