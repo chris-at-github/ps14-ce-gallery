@@ -91,21 +91,34 @@ plugin.tx_xo.settings.modules {
 					}
 				}
 			}
+
 			heroSlider {
-				width = 800
-				height = 400
+				width = 1200
+				height = 675
 				cropVariant = thumbnail
 				mediaQueries {
 					0 {
-						maxHeight = 250
+						maxWidth = 576
 						cropVariant = thumbnail
 						mediaQuery = (min-width: 0px)
 					}
 
 					1 {
-						maxHeight = 400
+						maxWidth = 768
 						cropVariant = thumbnail
 						mediaQuery = (min-width: 576px)
+					}
+
+					2 {
+						maxWidth = 992
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 768px)
+					}
+
+					3 {
+						maxWidth = 1200
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 992px)
 					}
 				}
 			}
