@@ -1,0 +1,14 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Main">
+		<f:if condition="{flexform.settings.slider.controls} == 1 || {flexform.settings.slider.navigation} == 1">
+			<div class="slider--interface">
+				<f:if condition="{flexform.settings.slider.controls} == 1">
+					<f:render partial="Components/Slider" section="Controls" arguments="{icons: {prev: '/assets/svg/chevron-left.svg', next: '/assets/svg/chevron-right.svg'}}" />
+				</f:if>
+				<f:if condition="{flexform.settings.slider.navigation} == 1">
+					<f:render partial="Components/Slider" section="Navigation" arguments="{elements: images}" />
+				</f:if>
+			</div>
+		</f:if>
+	</f:section>
+</div>

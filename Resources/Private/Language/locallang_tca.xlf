@@ -26,6 +26,9 @@
 			<trans-unit id="tx_ce_gallery.settings.layouts.slider">
 				<source>Slider</source>
 			</trans-unit>
+			<trans-unit id="tx_ce_gallery.settings.layouts.heroSlider">
+				<source>Hero Slider</source>
+			</trans-unit>
 			<trans-unit id="tx_ce_gallery.settings.controls">
 				<source>Display controls</source>
 			</trans-unit>
