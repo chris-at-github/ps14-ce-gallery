@@ -70,7 +70,9 @@
 							// Beim Fokusieren eines Links / Buttons innerhalb eines Eintrags immer zu diesem Eintrag springen
 							item.querySelectorAll('a, button').forEach(function(element) {
 								element.addEventListener('focus', function() {
-									slider.goTo(item.getAttribute('data-index'));
+									if(document.body.classList.contains('focusable') === true) {
+										slider.goTo(item.getAttribute('data-index'));
+									}
 								});
 							});
 						});
