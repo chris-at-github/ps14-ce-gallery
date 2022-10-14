@@ -23,11 +23,13 @@ tt_content {
 				as = images
 				references.fieldName = tx_xo_file
 			}
+
 			110 = Ps\Xo\DataProcessing\FlexFormProcessor
 			110 {
 				fieldName = pi_flexform
 				as = flexform
 			}
+
 			120 = Ps\Xo\DataProcessing\SettingsProcessor
 
 			130 = Ps14\CeGallery\DataProcessing\ModuleProcessor
@@ -49,6 +51,7 @@ plugin.tx_xo.settings.modules {
 		layouts {
 			default = LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.settings.layouts.default
 			slider = LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.settings.layouts.slider
+			heroSlider = LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.settings.layouts.heroSlider
 		}
 
 		image {
@@ -86,6 +89,37 @@ plugin.tx_xo.settings.modules {
 						maxHeight = 250
 						cropVariant = thumbnail
 						mediaQuery = (min-width: 0px)
+					}
+				}
+			}
+
+			heroSlider {
+				width = 1200
+				height = 675
+				cropVariant = thumbnail
+				mediaQueries {
+					0 {
+						maxWidth = 576
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 0px)
+					}
+
+					1 {
+						maxWidth = 768
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 576px)
+					}
+
+					2 {
+						maxWidth = 992
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 768px)
+					}
+
+					3 {
+						maxWidth = 1200
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 992px)
 					}
 				}
 			}

@@ -19,22 +19,19 @@
 		</f:if>
 
 		<div class="slider gallery" data-gallery-uid="{data.uid}" data-gallery-lightbox="{data.image_zoom}">
-			<ul class="slider--container gallery--container">
-				<f:for each="{images}" as="image" iteration="iterator">
-					<li class="slider--item" data-index="{iterator.index}"><f:render partial="Item" section="Main" arguments="{_all}" /></li>
-				</f:for>
-			</ul>
+			<f:render partial="SliderContainer" section="Main" arguments="{_all}" />
+			<f:render partial="SliderInterface" section="Main" arguments="{_all}" />
+		</div>
+	</f:section>
 
-			<f:if condition="{flexform.settings.slider.controls} == 1 || {flexform.settings.slider.navigation} == 1">
-				<div class="slider--interface">
-					<f:if condition="{flexform.settings.slider.controls} == 1">
-						<f:render partial="Components/Slider" section="Controls" arguments="{icons: {prev: '/assets/svg/chevron-left.svg', next: '/assets/svg/chevron-right.svg'}}" />
-					</f:if>
-					<f:if condition="{flexform.settings.slider.navigation} == 1">
-						<f:render partial="Components/Slider" section="Navigation" arguments="{elements: images}" />
-					</f:if>
-				</div>
-			</f:if>
+	<f:section name="HeroSlider">
+		<f:if condition="{data.bodytext}">
+			<f:format.html>{data.bodytext}</f:format.html>
+		</f:if>
+
+		<div class="hero-slider gallery" data-gallery-uid="{data.uid}" data-gallery-lightbox="{data.image_zoom}">
+			<f:render partial="SliderContainer" section="Main" arguments="{_all}" />
+			<f:render partial="SliderInterface" section="Main" arguments="{_all}" />
 		</div>
 	</f:section>
 </div>

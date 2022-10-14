@@ -10,6 +10,7 @@
 $ce-gallery--use-css: true !default;
 $ce-gallery--layout-default: true !default;
 $ce-gallery--layout-slider: true !default;
+$ce-gallery--layout-hero-slider: true !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // CSS
@@ -116,7 +117,103 @@ $ce-gallery--layout-slider: true !default;
 				}
 			}
 		}
+	}
 
+	@if($ce-gallery--layout-hero-slider) {
+		.ce-gallery--hero-slider {
+			.gallery {
+				position: relative;
+				overflow: hidden;
+			}
+
+			.gallery:before {
+				content: '';
+				display: block;
+				padding-top: 56.25%;
+			}
+
+			.gallery--container {
+				& {
+					position: absolute;
+					top: 0;
+					left: 0; right: 0;
+					margin: 0;
+					padding: 0;
+					list-style: none;
+
+				}
+
+				& > li {
+					display: block;
+					margin: 0;
+					padding: 0;
+				}
+			}
+
+			.slider--interface {
+				position: absolute;
+				bottom: 10px;
+				left: 0; right: 0;
+				z-index: -1;
+				opacity: 0;
+			}
+
+			.gallery--image {
+				img {
+					@extend %image-responsive;
+				}
+			}
+
+			//.gallery--image {
+			//	& {
+			//		position: relative;
+			//		padding-top: 56.25%;
+			//	}
+			//
+			//	img {
+			//		position: absolute;
+			//		top: 0; left: 0;
+			//	}
+			//}
+
+			.slider {
+				& {
+					@extend %slider-controls;
+					@extend %slider-controls--inline;
+					@extend %slider-navigation;
+					@extend %slider-navigation--bullets;
+					margin: $spacing-default 0 0 0;
+				}
+
+				.slider--interface {
+					position: absolute;
+					bottom: 10px;
+					left: 0; right: 0;
+
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					grid-template-rows: 50px;
+					grid-template-areas: 'slider--controls slider--navigation';
+					margin-top: rem(10px);
+				}
+
+				.slider--controls {
+					grid-area: slider--controls;
+				}
+
+				.slider--navigation {
+					grid-area: slider--navigation;
+					justify-self: right;
+					align-self: center;
+				}
+			}
+
+			.slider--initialized {
+				.gallery--container {
+					overflow: inherit;
+				}
+			}
+		}
 	}
 
 	@include media-breakpoint-up(sm) {

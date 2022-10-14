@@ -34,4 +34,16 @@
 			sizes: settings.mediaQueries
 		}" />
 	</f:section>
+
+	<f:section name="HeroSlider">
+		<f:render partial="Components/Media" section="Picture" arguments="{
+			file: image,
+			image: {
+				width: settings.width,
+				maxHeight: settings.height,
+				cropVariant: settings.cropVariant
+			},
+			sizes: settings.mediaQueries
+		}" />
+	</f:section>
 </div>
