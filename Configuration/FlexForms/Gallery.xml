@@ -6,20 +6,20 @@
 		<main>
 			<ROOT>
 				<TCEforms>
-					<sheetTitle>LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.tab.main</sheetTitle>
+					<sheetTitle>LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.tab.main</sheetTitle>
 				</TCEforms>
 				<type>array</type>
 				<el>
 					<settings.layout type="array">
 						<TCEforms>
-							<label>LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.settings.layout</label>
+							<label>LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.settings.layout</label>
 							<onChange>reload</onChange>
 							<config>
 								<type>select</type>
 								<renderType>selectSingle</renderType>
 								<itemsProcFunc>Ps\Xo\Service\TcaService->getItemsBySettingsIdentifier</itemsProcFunc>
 								<itemsProcConfig>
-									<identifier>modules.ce_gallery.layouts</identifier>
+									<identifier>modules.ps14_gallery.layouts</identifier>
 									<extension>xo</extension>
 								</itemsProcConfig>
 							</config>
@@ -31,13 +31,13 @@
 		<slider>
 			<ROOT>
 				<TCEforms>
-					<sheetTitle>LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.tab.slider</sheetTitle>
+					<sheetTitle>LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.tab.slider</sheetTitle>
 				</TCEforms>
 				<type>array</type>
 				<el>
 					<settings.slider.controls type="array">
 						<TCEforms>
-							<label>LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.settings.controls</label>
+							<label>LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.settings.controls</label>
 							<displayCond>FIELD:main.settings.layout:IN:slider,heroSlider</displayCond>
 							<config>
 								<type>check</type>
@@ -52,7 +52,7 @@
 					</settings.slider.controls>
 					<settings.slider.navigation type="array">
 						<TCEforms>
-							<label>LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.settings.navigation</label>
+							<label>LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.settings.navigation</label>
 							<displayCond>FIELD:main.settings.layout:IN:slider,heroSlider</displayCond>
 							<config>
 								<type>check</type>

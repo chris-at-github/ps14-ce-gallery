@@ -1,20 +1,20 @@
 tt_content {
-	ce_gallery =< lib.contentElement
-	ce_gallery {
+	ps14_gallery =< lib.contentElement
+	ps14_gallery {
 		templateName = Gallery.html
 		layoutRootPaths {
-			10 = EXT:ce_gallery/Resources/Private/Layouts/
-			20 = EXT:xna/Resources/Private/Extensions/CeGallery/Layouts/
+			10 = EXT:ps14_gallery/Resources/Private/Layouts/
+			20 = EXT:xna/Resources/Private/Extensions/Ps14Gallery/Layouts/
 		}
 
 		templateRootPaths {
-			10 = EXT:ce_gallery/Resources/Private/Templates/
-			20 = EXT:xna/Resources/Private/Extensions/CeGallery/Templates/
+			10 = EXT:ps14_gallery/Resources/Private/Templates/
+			20 = EXT:xna/Resources/Private/Extensions/Ps14Gallery/Templates/
 		}
 
 		partialRootPaths {
-			10 = EXT:ce_gallery/Resources/Private/Partials/
-			20 = EXT:xna/Resources/Private/Extensions/CeGallery/Partials/
+			10 = EXT:ps14_gallery/Resources/Private/Partials/
+			20 = EXT:xna/Resources/Private/Extensions/Ps14Gallery/Partials/
 		}
 
 		dataProcessing {
@@ -47,11 +47,11 @@ tt_content {
 }
 
 plugin.tx_xo.settings.modules {
-	ce_gallery {
+	ps14_gallery {
 		layouts {
-			default = LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.settings.layouts.default
-			slider = LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.settings.layouts.slider
-			heroSlider = LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.settings.layouts.heroSlider
+			default = LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.settings.layouts.default
+			slider = LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.settings.layouts.slider
+			heroSlider = LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.settings.layouts.heroSlider
 		}
 
 		image {
@@ -127,4 +127,4 @@ plugin.tx_xo.settings.modules {
 	}
 }
 
-module.tx_xo.settings.modules.ce_gallery < plugin.tx_xo.settings.modules.ce_gallery
+module.tx_xo.settings.modules.ps14_gallery < plugin.tx_xo.settings.modules.ps14_gallery

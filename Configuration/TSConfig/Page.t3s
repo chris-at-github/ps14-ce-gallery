@@ -1,16 +1,16 @@
 mod.wizards.newContentElement.wizardItems {
 	common {
 		elements {
-			ce_gallery {
+			ps14_gallery {
 				iconIdentifier = content-image
-				title = LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.title
-				description = LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.description
+				title = LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.title
+				description = LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.description
 				tt_content_defValues {
-					CType = ce_gallery
+					CType = ps14_gallery
 				}
 			}
 		}
 
-		show := addToList(ce_gallery)
+		show := addToList(ps14_gallery)
 	}
 }

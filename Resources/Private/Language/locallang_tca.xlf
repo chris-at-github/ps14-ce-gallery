@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2021-05-05T06:25:54Z" product-name="ce_gallery">
+	<file source-language="en" datatype="plaintext" original="messages" date="2021-05-05T06:25:54Z" product-name="ps14_gallery">
 		<header/>
 		<body>
-			<trans-unit id="tx_ce_gallery.title">
+			<trans-unit id="tx_ps14_gallery.title">
 				<source>Image Gallery</source>
 			</trans-unit>
-			<trans-unit id="tx_ce_gallery.description">
+			<trans-unit id="tx_ps14_gallery.description">
 				<source>Image gallery module description</source>
 			</trans-unit>
 
-			<trans-unit id="tx_ce_gallery.tab.main">
+			<trans-unit id="tx_ps14_gallery.tab.main">
 				<source>General</source>
 			</trans-unit>
-			<trans-unit id="tx_ce_gallery.tab.slider">
+			<trans-unit id="tx_ps14_gallery.tab.slider">
 				<source>Slider</source>
 			</trans-unit>
 
-			<trans-unit id="tx_ce_gallery.settings.layout">
+			<trans-unit id="tx_ps14_gallery.settings.layout">
 				<source>Layout</source>
 			</trans-unit>
-			<trans-unit id="tx_ce_gallery.settings.layouts.default">
+			<trans-unit id="tx_ps14_gallery.settings.layouts.default">
 				<source>Default</source>
 			</trans-unit>
-			<trans-unit id="tx_ce_gallery.settings.layouts.slider">
+			<trans-unit id="tx_ps14_gallery.settings.layouts.slider">
 				<source>Slider</source>
 			</trans-unit>
-			<trans-unit id="tx_ce_gallery.settings.layouts.heroSlider">
+			<trans-unit id="tx_ps14_gallery.settings.layouts.heroSlider">
 				<source>Hero Slider</source>
 			</trans-unit>
-			<trans-unit id="tx_ce_gallery.settings.controls">
+			<trans-unit id="tx_ps14_gallery.settings.controls">
 				<source>Display controls</source>
 			</trans-unit>
-			<trans-unit id="tx_ce_gallery.settings.navigation">
+			<trans-unit id="tx_ps14_gallery.settings.navigation">
 				<source>Display navigation</source>
 			</trans-unit>
 

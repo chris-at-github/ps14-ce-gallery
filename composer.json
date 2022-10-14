@@ -1,5 +1,5 @@
 {
-	"name": "ps14/ce-gallery",
+	"name": "ps14/ps14-gallery",
 	"type": "typo3-cms-extension",
 	"description": "",
 	"authors": [
@@ -13,20 +13,20 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Ps14\\CeGallery\\": "Classes"
+			"Ps14\\Ps14Gallery\\": "Classes"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Ps14\\CeGallery\\Tests\\": "Tests"
+			"Ps14\\Ps14Gallery\\Tests\\": "Tests"
 		}
 	},
 	"replace": {
-		"typo3-ter/ce-gallery": "self.version"
+		"typo3-ter/ps14-gallery": "self.version"
 	},
 	"extra": {
 		"typo3/cms": {
-			"extension-key": "ce_gallery"
+			"extension-key": "ps14_gallery"
 		}
 	}
 }

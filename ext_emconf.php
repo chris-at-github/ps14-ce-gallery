@@ -19,7 +19,7 @@ $EM_CONF[$_EXTKEY] = [
 	],
 	'autoload' => [
 		'psr-4' => [
-			'Ps14\\CeGallery\\' => 'Classes',
+			'Ps14\\Ps14Gallery\\' => 'Classes',
 		],
 	],
 ];

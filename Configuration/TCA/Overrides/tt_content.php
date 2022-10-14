@@ -4,21 +4,21 @@
 // Icon Text Module von TT-Content
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
 	array(
-		'LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ce_gallery.title',
-		'ce_gallery',
+		'LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.title',
+		'ps14_gallery',
 		'content-image'
 	),
 	'CType',
-	'ce_gallery'
+	'ps14_gallery'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
 	'*',
-	'FILE:EXT:ce_gallery/Configuration/FlexForms/Gallery.xml',
-	'ce_gallery'
+	'FILE:EXT:ps14_gallery/Configuration/FlexForms/Gallery.xml',
+	'ps14_gallery'
 );
 
-$GLOBALS['TCA']['tt_content']['types']['ce_gallery'] = [
+$GLOBALS['TCA']['tt_content']['types']['ps14_gallery'] = [
 	'showitem' => '
 			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.general;general,
 			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.header;xoHeader, bodytext, tx_xo_file, image_zoom, pi_flexform,
@@ -32,7 +32,7 @@ $GLOBALS['TCA']['tt_content']['types']['ce_gallery'] = [
 	',
 	'columnsOverrides' => [
 		'tx_xo_file' => [
-			'label' => 'LLL:EXT:ce_gallery/Resources/Private/Language/locallang_tca.xlf:tt_content.tx_xo_file',
+			'label' => 'LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tt_content.tx_xo_file',
 			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
 				'tx_xo_file',
 				[
@@ -48,7 +48,7 @@ $GLOBALS['TCA']['tt_content']['types']['ce_gallery'] = [
 	]
 ];
 
-$GLOBALS['TCA']['tt_content']['types']['ce_gallery']['columnsOverrides']['tx_xo_file']['config']['overrideChildTca']['types'] = [
+$GLOBALS['TCA']['tt_content']['types']['ps14_gallery']['columnsOverrides']['tx_xo_file']['config']['overrideChildTca']['types'] = [
 	'0' => [
 		'showitem' => '
 			--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
@@ -61,7 +61,7 @@ $GLOBALS['TCA']['tt_content']['types']['ce_gallery']['columnsOverrides']['tx_xo_
 	],
 ];
 
-$GLOBALS['TCA']['tt_content']['types']['ce_gallery']['columnsOverrides']['bodytext']['config'] = [
+$GLOBALS['TCA']['tt_content']['types']['ps14_gallery']['columnsOverrides']['bodytext']['config'] = [
 	'enableRichtext' => true,
 	'richtextConfiguration' => 'xoDefault',
 ];
