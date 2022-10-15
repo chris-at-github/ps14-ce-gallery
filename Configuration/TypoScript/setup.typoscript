@@ -46,85 +46,83 @@ tt_content {
 	}
 }
 
-plugin.tx_xo.settings.modules {
-	ps14_gallery {
-		layouts {
-			default = LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.settings.layouts.default
-			slider = LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.settings.layouts.slider
-			heroSlider = LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.settings.layouts.heroSlider
+plugin.tx_ps14gallery.settings {
+	layouts {
+		default = LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.settings.layouts.default
+		slider = LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.settings.layouts.slider
+		heroSlider = LLL:EXT:ps14_gallery/Resources/Private/Language/locallang_tca.xlf:tx_ps14_gallery.settings.layouts.heroSlider
+	}
+
+	image {
+		default {
+			width = 510
+			height = 510
+			cropVariant = thumbnail
+			mediaQueries {
+				576 {
+					maxWidth = 360
+					cropVariant = thumbnail
+					mediaQuery = (min-width: 576px)
+				}
+
+				0 {
+					maxWidth = 510
+					cropVariant = thumbnail
+					mediaQuery = (min-width: 0px)
+				}
+			}
 		}
 
-		image {
-			default {
-				width = 510
-				height = 510
-				cropVariant = thumbnail
-				mediaQueries {
-					576 {
-						maxWidth = 360
-						cropVariant = thumbnail
-						mediaQuery = (min-width: 576px)
-					}
+		slider {
+			width = 800
+			height = 400
+			cropVariant = thumbnail
+			mediaQueries {
+				576 {
+					maxHeight = 400
+					cropVariant = thumbnail
+					mediaQuery = (min-width: 576px)
+				}
 
-					0 {
-						maxWidth = 510
-						cropVariant = thumbnail
-						mediaQuery = (min-width: 0px)
-					}
+				0 {
+					maxHeight = 250
+					cropVariant = thumbnail
+					mediaQuery = (min-width: 0px)
 				}
 			}
+		}
 
-			slider {
-				width = 800
-				height = 400
-				cropVariant = thumbnail
-				mediaQueries {
-					576 {
-						maxHeight = 400
-						cropVariant = thumbnail
-						mediaQuery = (min-width: 576px)
-					}
-
-					0 {
-						maxHeight = 250
-						cropVariant = thumbnail
-						mediaQuery = (min-width: 0px)
-					}
+		heroSlider {
+			width = 1200
+			height = 675
+			cropVariant = thumbnail
+			mediaQueries {
+				0 {
+					maxWidth = 576
+					cropVariant = thumbnail
+					mediaQuery = (min-width: 0px)
 				}
-			}
 
-			heroSlider {
-				width = 1200
-				height = 675
-				cropVariant = thumbnail
-				mediaQueries {
-					0 {
-						maxWidth = 576
-						cropVariant = thumbnail
-						mediaQuery = (min-width: 0px)
-					}
+				1 {
+					maxWidth = 768
+					cropVariant = thumbnail
+					mediaQuery = (min-width: 576px)
+				}
 
-					1 {
-						maxWidth = 768
-						cropVariant = thumbnail
-						mediaQuery = (min-width: 576px)
-					}
+				2 {
+					maxWidth = 992
+					cropVariant = thumbnail
+					mediaQuery = (min-width: 768px)
+				}
 
-					2 {
-						maxWidth = 992
-						cropVariant = thumbnail
-						mediaQuery = (min-width: 768px)
-					}
-
-					3 {
-						maxWidth = 1200
-						cropVariant = thumbnail
-						mediaQuery = (min-width: 992px)
-					}
+				3 {
+					maxWidth = 1200
+					cropVariant = thumbnail
+					mediaQuery = (min-width: 992px)
 				}
 			}
 		}
 	}
 }
 
-module.tx_xo.settings.modules.ps14_gallery < plugin.tx_xo.settings.modules.ps14_gallery
+module.tx_ps14gallery.settings < plugin.tx_ps14gallery.settings

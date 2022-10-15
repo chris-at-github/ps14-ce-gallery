@@ -19,8 +19,8 @@
 								<renderType>selectSingle</renderType>
 								<itemsProcFunc>Ps\Xo\Service\TcaService->getItemsBySettingsIdentifier</itemsProcFunc>
 								<itemsProcConfig>
-									<identifier>modules.ps14_gallery.layouts</identifier>
-									<extension>xo</extension>
+									<identifier>layouts</identifier>
+									<extension>Ps14Gallery</extension>
 								</itemsProcConfig>
 							</config>
 						</TCEforms>
