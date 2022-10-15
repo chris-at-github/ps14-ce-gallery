@@ -8,9 +8,9 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Variablen
 $ce-gallery--use-css: true !default;
-$ce-gallery--layout-default: true !default;
-$ce-gallery--layout-slider: true !default;
-$ce-gallery--layout-hero-slider: true !default;
+$ps14-gallery--layout-default: true !default;
+$ce-gallery--layout-slider: false !default;
+$ce-gallery--layout-hero-slider: false !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // CSS
@@ -22,27 +22,26 @@ $ce-gallery--layout-hero-slider: true !default;
 		--gallery--slider-height: 400px;
 	}
 
-	@if($ce-gallery--layout-default) {
+	@if($ps14-gallery--layout-default) {
 		.ce-gallery--default {
 			.gallery--container {
 				& {
 					margin: 0;
 					padding: 0;
 					list-style: none;
-					@include make-row();
 				}
 
 				& > li {
 					margin: 0;
 					padding: 0;
-					@include make-col-ready();
+					grid-column: auto/span 12;
 				}
 			}
 
 			.gallery--image {
 				& {
 					display: block;
-					margin-top: $spacing-default;
+					//margin-top: var(--grid__gap);
 					border: 5px solid #b1b1b1;
 				}
 
@@ -217,30 +216,30 @@ $ce-gallery--layout-hero-slider: true !default;
 	}
 
 	@include media-breakpoint-up(sm) {
-		@if($ce-gallery--layout-default) {
+		@if($ps14-gallery--layout-default) {
 			.ce-gallery--default {
 				.gallery--container {
-					& {
-						margin-top: -10px; // Ausgleich um wieder auf 20px zu kommen
-					}
+					//& {
+					//	margin-top: -10px; // Ausgleich um wieder auf 20px zu kommen
+					//}
 
 					& > li {
-						@include make-col(6);
+						grid-column: auto/span 6;
 					}
 				}
 
-				.gallery--image {
-					margin-top: $grid-gutter-width;
-				}
+				//.gallery--image {
+				//	margin-top: var(--grid__gap);
+				//}
 			}
 		}
 	}
 
 	@include media-breakpoint-up(md) {
-		@if($ce-gallery--layout-default) {
+		@if($ps14-gallery--layout-default) {
 			.ce-gallery--default {
 				.gallery--container > li {
-					@include make-col(4);
+					grid-column: auto/span 3;
 				}
 			}
 		}
@@ -249,4 +248,4 @@ $ce-gallery--layout-hero-slider: true !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // XNA Override
-@import '../../../../xna/Resources/Public/Sass/xna/modules/gallery';
+@import '../../../../xna/Resources/Public/Sass/modules/gallery';

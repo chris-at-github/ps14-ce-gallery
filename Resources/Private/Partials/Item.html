@@ -3,12 +3,12 @@
 		<f:if condition="{data.image_zoom}">
 			<f:then>
 				<a class="gallery--image" data-group="gallery-{data.uid}" href="{f:uri.image(src: image.uid, treatIdAsReference: 1, maxWidth: 1280, height: 1024, cropVariant: 'fullscreen')}" aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo.action.enlarge')}">
-					<f:render partial="Image" section="Main" arguments="{_all}" />
+					<f:render partial="Image" section="Main" arguments="{image: image, flexform: flexform, settings: '{xo:settings.get(extension: \'Ps14Gallery\')}'}" />
 				</a>
 			</f:then>
 			<f:else>
 				<div class="gallery--image">
-					<f:render partial="Image" section="Main" arguments="{_all}" />
+					<f:render partial="Image" section="Main" arguments="{image: image, flexform: flexform, settings: '{xo:settings.get(extension: \'Ps14Gallery\')}'}" />
 				</div>
 			</f:else>
 		</f:if>

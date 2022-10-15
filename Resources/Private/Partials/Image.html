@@ -2,12 +2,12 @@
 	<f:section name="Main">
 		<f:variable
 			name="imageSettings"
-			value="{settings.modules.ce_gallery.image.{flexform.settings.layout}}"
+			value="{settings.image.{flexform.settings.layout}}"
 		/>
 
 		<f:render
 			section="{flexform.settings.layout -> xo:format.ucFirst()}"
-			arguments="{image: image, settings: imageSettings}"
+			arguments="{image: image, settings: '{settings.image.{flexform.settings.layout}}'}"
 		/>
 	</f:section>
 
