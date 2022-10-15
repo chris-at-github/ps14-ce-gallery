@@ -32,7 +32,7 @@ tt_content {
 
 			120 = Ps\Xo\DataProcessing\SettingsProcessor
 
-			130 = Ps14\CeGallery\DataProcessing\ModuleProcessor
+			130 = Ps14\Ps14Gallery\DataProcessing\ModuleProcessor
 			130 {
 				importCss {
 					10 = /assets/css/modules/gallery.css
