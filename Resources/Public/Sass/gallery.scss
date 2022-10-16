@@ -24,6 +24,10 @@ $ce-gallery--layout-hero-slider: false !default;
 
 	@if($ps14-gallery--layout-default) {
 		.ce-gallery--default {
+			.ce-header + .gallery {
+				margin-top: var(--html-element__spacing-header);
+			}
+
 			.gallery--container {
 				& {
 					margin: 0;
