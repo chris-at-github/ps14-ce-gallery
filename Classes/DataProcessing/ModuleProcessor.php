@@ -23,12 +23,12 @@ class ModuleProcessor extends \Ps\Xo\DataProcessing\ModuleProcessor implements D
 
 		// Lightbox (Tobii) nur einbinden wenn das Haekchen (Image Zoom) im Backend aktiviert ist
 		if((int) $processedData['data']['image_zoom'] === 1) {
-			$this->addImportJsFiles(['/assets/js/tobii.js' => ['forceOnTop' => true]]);
+			$this->addImportJsFiles(['/assets/js/vendors/tobii.js' => ['forceOnTop' => true]]);
 		}
 
 		// wenn Layout Slider ausgewaehlt ist
 		if(isset($processedData['flexform']['settings']['layout']) && $processedData['flexform']['settings']['layout'] === 'slider') {
-			$this->addImportJsFiles(['/assets/js/tiny-slider.js' => ['forceOnTop' => true]]);
+			$this->addImportJsFiles(['/assets/js/vendors/tiny-slider.js' => ['forceOnTop' => true]]);
 		}
 
 		return parent::process($contentObject, $contentObjectConfiguration, $processorConfiguration, $processedData);
