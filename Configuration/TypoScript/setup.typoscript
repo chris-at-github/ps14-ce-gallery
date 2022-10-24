@@ -39,7 +39,7 @@ tt_content {
 				}
 
 				importJs {
-					10 = /assets/js/gallery.js
+					10 = /assets/js/modules/gallery.js
 				}
 			}
 		}
