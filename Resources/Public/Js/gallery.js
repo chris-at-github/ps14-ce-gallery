@@ -6,12 +6,13 @@
 		// Lightbox (gilt fuer Layout Default und Slider)
 		if(typeof(Tobii) === 'function') {
 			document.querySelectorAll('.ce-gallery').forEach(function(node, index) {
-				let uid = node.getAttribute('id');
-				let isLightbox = parseInt(node.querySelector('.gallery').getAttribute('data-gallery-lightbox'));
-
-				if(isLightbox === 1) {
+				// let uid = node.getAttribute('id');
+				// let isLightbox = parseInt(node.querySelector('.gallery').getAttribute('data-gallery-lightbox'));
+				//
+				// if(isLightbox === 1) {
 					let lightbox = new Tobii({
-						selector: '#' + uid + ' .gallery--image',
+						// selector: '#' + uid + ' .gallery--image',
+						selector: '.tobii-trigger',
 						captionAttribute: 'title',
 						counter: false,
 						zoom: false,
@@ -24,7 +25,7 @@
 						closeLabel: xna.l10n.gallery.close,
 						autoplayVideo: true
 					});
-				}
+				// }
 			});
 		}
 
